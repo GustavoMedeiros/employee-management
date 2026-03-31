@@ -1,0 +1,17 @@
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\entity\Employee.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\entity\User.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\dto\EmployeeDTO.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\config\JwtTokenProvider.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\controller\HealthController.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\dto\LoginResponse.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\service\EmployeeService.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\EmployeesApplication.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\repository\EmployeeRepository.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\config\SecurityConfig.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\controller\EmployeeController.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\repository\UserRepository.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\controller\AuthController.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\service\AuthService.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\config\JwtAuthenticationFilter.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\dto\LoginRequest.java
+C:\Users\gusta\Projetos\employee-management\backend\src\main\java\com\company\employees\config\GlobalExceptionHandler.java

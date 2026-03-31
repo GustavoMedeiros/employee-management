@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-app: #FAFAFA;
+  --background-panel: #FFFFFF;
+  --foreground-primary: #0A0A0A;
+  --foreground-secondary: #666666;
+  --foreground-muted: #A3A3A3;
+  --brand-primary: #002FA7;
+  --brand-primary-hover: #00227A;
+  --brand-primary-foreground: #FFFFFF;
+  --status-active-bg: #E6F9EC;
+  --status-active-text: #008A39;
+  --status-active-border: #00C853;
+  --status-inactive-bg: #FFEDED;
+  --status-inactive-text: #CC0000;
+  --status-inactive-border: #FF2A2A;
+  --border-default: #E5E5E5;
+  --border-focus: #002FA7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: var(--background-app);
+  color: var(--foreground-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+/* Button active state */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-app);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--foreground-muted);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground-secondary);
+}
+
+/* Input placeholder */
+::placeholder {
+  color: var(--foreground-muted);
+}
+
+/* Selection */
+::selection {
+  background: var(--brand-primary);
+  color: var(--brand-primary-foreground);
+}

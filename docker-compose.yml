@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:16-alpine
+    container_name: funcionarios_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: funcionarios_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d funcionarios_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - funcionarios_network
+
+  # Backend Java/Spring Boot
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: funcionarios_backend
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: funcionarios_db
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      JWT_SECRET: minha-chave-secreta-muito-segura-para-jwt-token-2024
+      CORS_ORIGINS: http://localhost:3000,http://localhost
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - funcionarios_network
+
+volumes:
+  postgres_data:
+
+networks:
+  funcionarios_network:
+    driver: bridge
